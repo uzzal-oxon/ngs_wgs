@@ -1,0 +1,3 @@
+Module	Section	Sample Name	Source
+FastQC	all_sections	SRR493366_1	/Users/uzzal/Documents/Uzzal_DPhil/github/new_jubayer/ngs_wgs/results/qc/SRR493366_1_fastqc.zip
+FastQC	all_sections	SRR493366_2	/Users/uzzal/Documents/Uzzal_DPhil/github/new_jubayer/ngs_wgs/results/qc/SRR493366_2_fastqc.zip

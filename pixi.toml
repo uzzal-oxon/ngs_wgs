@@ -1,0 +1,18 @@
+[workspace]
+authors = ["uzzal-oxon <uzzalbge10044@gmail.com>"]
+channels = ['conda-forge', 'bioconda']
+name = "ngs_wgs"
+platforms = ['osx-arm64']
+version = "0.1.0"
+
+[dependencies]
+fastqc = ">=0.13.0,<0.14"
+multiqc = ">=1.35,<2"
+fastp = ">=1.4.0,<2"
+
+[tasks]
+qc = "fastqc data/raw/*.fastq.gz --outdir results/qc/ --threads 4"
+multiqc = { cmd = "multiqc results/qc/ -o results/multiqc/", depends-on = ["qc"] }
+pipeline = { depends-on = ["qc", "multiqc"] }
+clean = "rm -rf results/"
+
